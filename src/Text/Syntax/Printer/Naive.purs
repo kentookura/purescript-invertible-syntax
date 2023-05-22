@@ -1,4 +1,8 @@
-module Text.Syntax.Printer.Naive where
+module Text.Syntax.Printer.Naive
+  ( Printer(..)
+  , print
+  )
+  where
 
 import Prelude hiding (apply)
 
@@ -6,7 +10,7 @@ import Control.Alt as Alt
 import Control.Apply (lift2)
 import Control.Isomorphism.Partial (class IsoFunctor, unapply)
 import Data.Maybe (Maybe(..))
-import Data.String (singleton)
+import Data.String.CodePoints (singleton, codePointFromChar)
 import Data.Tuple (Tuple(..))
 import Text.Syntax.Classes (class Alternative, class ProductFunctor, class Syntax)
 

@@ -3,6 +3,7 @@ module Text.Syntax.Classes where
 import Prelude hiding (($), (<*>), apply, map)
 
 import Control.Isomorphism.Partial (class IsoFunctor)
+import Data.String.CodePoints (CodePoint)
 import Data.Tuple (Tuple)
 
 
@@ -21,4 +22,4 @@ infixl 3 alt as <|>
 
 class (IsoFunctor d, ProductFunctor d, Alternative d) <= Syntax d where
   pure :: forall a. Eq a => a -> d a
-  token :: d Char
+  token :: d CodePoint

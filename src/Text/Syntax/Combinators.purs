@@ -10,7 +10,7 @@ import Control.Isomorphism.Partial.Prim (commute, element, ignore, unit)
 import Data.Either (Either)
 import Data.List (List(..), singleton)
 import Data.Maybe (Maybe(..))
-import Data.String (uncons)
+import Data.String.CodePoints (uncons)
 import Data.Tuple (Tuple(..))
 import Data.Unit as Unit
 import Text.Syntax.Classes (class Syntax, pure, token, (<*>), (<|>))
